@@ -1,0 +1,17 @@
+[include mainsail.cfg]
+[include fluidd.cfg]
+[include V0Display.cfg]
+[mcu]
+serial: /dev/serial/by-id/usb-Klipper_stm32f405xx_39002C001547323330373434-if00
+
+[mcu host]
+serial: /tmp/klipper_host_mcu
+
+[virtual_sdcard]
+path: /home/fly/printer_data/gcodes
+on_error_gcode: CANCEL_PRINT
+
+[printer]
+kinematics: none
+max_velocity: 1000
+max_accel: 1000
